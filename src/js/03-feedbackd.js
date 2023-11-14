@@ -3,7 +3,7 @@ const formElement = document.querySelector('.feedback-form');
 const emailInput = document.querySelector('input[name="email"]');
 const messageTextarea = document.querySelector('textarea[name="message"]');
 
-const updateLocalStorageThrottled = throttle(function () {
+const updateLocalStorage = throttle(function () {
   const feedbackFormState = {
     email: emailInput.value,
     message: messageTextarea.value,
@@ -23,7 +23,7 @@ window.addEventListener('load', function () {
 });
 formElement.addEventListener('input', function (event) {
   event.preventDefault();
-  updateLocalStorageThrottled();
+  updateLocalStorage();
 });
 formElement.addEventListener('submit', function (event) {
   event.preventDefault();
