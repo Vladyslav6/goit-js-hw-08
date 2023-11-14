@@ -34,5 +34,5 @@ formElement.addEventListener('submit', function (event) {
   localStorage.removeItem('feedback-form-state');
   emailInput.value = '';
   messageTextarea.value = '';
-  console.log('Submitted Feedback:', currentValues);
+  console.log('Message:', currentValues);
 });
