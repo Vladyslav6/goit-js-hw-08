@@ -31,6 +31,10 @@ formElement.addEventListener('submit', function (event) {
     email: emailInput.value,
     message: messageTextarea.value,
   };
+  if (emailInput.value == '' || messageTextarea.value == '') {
+    alert('Поля повинні бути заповнені');
+    return;
+  }
   localStorage.removeItem('feedback-form-state');
   emailInput.value = '';
   messageTextarea.value = '';
